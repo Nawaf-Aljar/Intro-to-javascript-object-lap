@@ -216,9 +216,6 @@ game.gyms.forEach(gym => {
     }
 })
 
-
-
-
 //Exercise 7
 
 game.party.splice(0,1,pokemon[1])
@@ -270,3 +267,55 @@ console.log(game.party)
 
 
 console.log("===================")
+
+//Exercise 12
+
+game.gyms.forEach(gym => {
+    if ( gym.difficulty < 6){
+        gym.completed = true
+    }
+})
+
+console.log(game)
+console.log("===================")
+
+// Exercise 13
+const gymTally ={
+    completed: 0,
+    incomplete: 0
+}
+game.gymStatus = function(){
+game.gyms.forEach(gym => {
+    if(gym.completed === true){
+        gymTally.completed +=1
+    }
+    else if (gym.completed === false){
+        gymTally.incomplete +=1
+    }
+
+})
+}
+
+game.gymStatus()
+console.log(gymTally)
+console.log("===================")
+
+// Exercise 14
+
+game.partyCount = function(){
+     return game.party.length
+}
+game.partyCount()
+
+console.log("===================")
+
+// Exercise 15
+game.gyms.forEach(gym => {
+    if ( gym.difficulty < 8){
+        gym.completed = true
+    }
+})
+
+// Exercise 16
+
+console.log(game)
